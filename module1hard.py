@@ -25,6 +25,3 @@ grades_midle.append(sum(grades[3])/len(grades[3]))
 grades_midle.append(sum(grades[4])/len(grades[4]))
 my_dict=dict(zip(students_list,grades_midle))
 print('Словарь с данными:', my_dict)
-
-
-
