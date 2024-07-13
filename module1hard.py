@@ -13,14 +13,17 @@ print('Исходное множество студентов:', students)
 #Напишите программу, которая составляет словарь, используя grades и students, где ключом будет имя ученика, а значением - его средний балл.
 students_list = sorted(list(students))
 print('Упорядоченный список студентов по алфавиту:', students_list)
-my_dict = {}
+#создаем пустой словарь
+my_dict = dict()
 print('Пустой словарь:', my_dict)
-my_dict.update({students_list[0]:sum(grades[0])/len(grades[0]),
-                students_list[1]:sum(grades[1])/len(grades[1]),
-                students_list[2]:sum(grades[2])/len(grades[2]),
-                students_list[3]:sum(grades[3])/len(grades[3]),
-                students_list[4]:sum(grades[4])/len(grades[4])})
-
+#создаем список среднего бала
+grades_midle = list()
+grades_midle.append(sum(grades[0])/len(grades[0]))
+grades_midle.append(sum(grades[1])/len(grades[1]))
+grades_midle.append(sum(grades[2])/len(grades[2]))
+grades_midle.append(sum(grades[3])/len(grades[3]))
+grades_midle.append(sum(grades[4])/len(grades[4]))
+my_dict=dict(zip(students_list,grades_midle))
 print('Словарь с данными:', my_dict)
 
 
